@@ -22,13 +22,10 @@ for ( j in 1: nSims ) {
 
 #This part of the calculation for Beta estimate doesn't change
 xMatrix = rbind(x1,x2)
-tX = t(xMatrix)
-combi = xMatrix%*%tX
-library(MASS)
-invCombi = ginv(combi)
 
+library(MASS)
 #calculate all estimators for beta 
-estimateBeta = invCombi%*%(xMatrix%*%Y)
+estimateBeta = ginv(xMatrix%*%t(xMatrix))%*%(xMatrix%*%Y)
 
 # plot estimator data
 hist (estimateBeta , freq = FALSE , breaks = 20)
