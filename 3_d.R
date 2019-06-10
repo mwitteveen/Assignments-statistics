@@ -32,6 +32,7 @@ for (N in c(100,1000)){
   hist (estimateBeta , freq = FALSE , breaks = 20)
   
   #print details
+  cat("N=", paste(N), "\n")
   cat("The estimated value of beta 1 is: ", mean(estimateBeta[1,]), "\n")
   cat("The variance of beta 1 is: ", sd(estimateBeta[1,])^2, "\n")
   cat("The estimated value of beta 2 is: ", mean(estimateBeta[2,]), "\n")
