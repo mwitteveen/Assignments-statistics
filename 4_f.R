@@ -19,6 +19,7 @@ for(N in c(20, 200, 2000)){
     }
   }
   
+  cat("N=", paste(N), "\n")
   for(i in 1:3){
     # plot estimator data
     hist (pbar[i,] , freq = FALSE , breaks = 20, main=paste("Histogram P",paste(i), " and N=", paste(N)))
