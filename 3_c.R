@@ -31,8 +31,8 @@ estimateBeta = ginv(xMatrix%*%t(xMatrix))%*%(xMatrix%*%Y)
 hist (estimateBeta , freq = FALSE , breaks = 20)
 
 #print details
-cat("The estimated value of beta 1 is: ", mean(estimateBeta[1,]))
-cat("The variance of beta 1 is: ", sd(estimateBeta[1,])^2)
-cat("The estimated value of beta 2 is: ", mean(estimateBeta[2,]))
-cat("The variance of beta 2 is: ", sd(estimateBeta[2,])^2)
+cat("The estimated value of beta 1 is: ", mean(estimateBeta[1,]), "\n")
+cat("The variance of beta 1 is: ", sd(estimateBeta[1,])^2, "\n")
+cat("The estimated value of beta 2 is: ", mean(estimateBeta[2,]), "\n")
+cat("The variance of beta 2 is: ", sd(estimateBeta[2,])^2, "\n")
 

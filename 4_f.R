@@ -24,7 +24,7 @@ for(N in c(20, 200, 2000)){
     hist (pbar[i,] , freq = FALSE , breaks = 20, main=paste("Histogram P",paste(i), " and N=", paste(N)))
     
     #print details
-    cat("The estimated value of p", i, "is: ", mean(pbar[i,]))
-    cat("The variance of p", i, "is: ", sd(pbar[i,])^2)
+    cat("The estimated value of p", i, "is: ", mean(pbar[i,]), "\n")
+    cat("The variance of p", i, "is: ", sd(pbar[i,])^2, "\n")
   }
 }
