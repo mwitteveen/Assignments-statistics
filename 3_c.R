@@ -1,5 +1,5 @@
 # Input parameters
-set.seed(666)
+set.seed(6)
 mu = 0
 sigmasq = 0.5
 N = 10
@@ -28,8 +28,8 @@ library(MASS)
 estimateBeta = ginv(xMatrix%*%t(xMatrix))%*%(xMatrix%*%Y)
 
 # plot estimator data
-hist (estimateBeta[1,] , freq = FALSE , breaks = 20, main=paste("Histogram Beta1"))
-hist (estimateBeta[2,] , freq = FALSE , breaks = 20, main=paste("Histogram Beta2"))
+hist (estimateBeta[1,] , freq = FALSE , breaks = 30, main=paste("Histogram Beta1"))
+hist (estimateBeta[2,] , freq = FALSE , breaks = 30, main=paste("Histogram Beta2"))
 
 #print details
 cat("The estimated value of beta 1 is: ", mean(estimateBeta[1,]), "\n")
